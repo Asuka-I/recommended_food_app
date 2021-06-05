@@ -8,7 +8,7 @@ class FoodsController < ApplicationController
   end
 
   def create
-    food = current_user.posts.create!(post_params)
+    food = current_user.foods.create!(food_params)
     redirect_to food
   end
 
@@ -23,6 +23,6 @@ class FoodsController < ApplicationController
   private
 
   def food_params
-    params.require(:post).permit(:content)
+    params.require(:food).permit(:name, :comment)
   end
 end

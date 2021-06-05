@@ -1,7 +1,7 @@
 ja:
   activerecord:
     models:
-      food:
+      food: 料理
     attributes:
       food:
         name: 料理名
