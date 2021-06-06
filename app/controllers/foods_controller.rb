@@ -1,5 +1,4 @@
 class FoodsController < ApplicationController
-
   before_action :set_food, only: %i[edit update destroy]
 
   def index
@@ -21,7 +20,10 @@ class FoodsController < ApplicationController
 
   def edit; end
 
-  def update; end
+  def update
+    @food.update!(food_params)
+    redirect_to @food
+  end
 
   def destroy
     @food.destroy!
